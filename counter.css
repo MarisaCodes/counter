@@ -1,0 +1,49 @@
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  font-family: monospace;
+  font-size: larger;
+  margin-top: 50px;
+  background: red;
+  color: white;
+  border: none;
+  padding-right: 50px;
+  padding-left: 50px;
+  height: 50px;
+  box-shadow: 10px 10px #666;
+  border-radius: 5px;
+}
+
+button:active {
+  background-color: red;
+  box-shadow: 0 5px rgb(143, 97, 97);
+  transform: translateY(10px) translateX(10px);
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 100px;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+}
+#btn2 {
+  font-family: monospace;
+  font-size: xx-large;
+  margin-top: 50px;
+  background: blue;
+  color: white;
+  border: none;
+  padding-right: 50px;
+  padding-left: 50px;
+  height: 50px;
+  box-shadow: 10px 10px #666;
+}
