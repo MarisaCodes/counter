@@ -1,4 +1,4 @@
-let count = 0;
+let count = 0, z = 0;
 increment = () => {
     document.getElementById("btn").innerText = count+=2;
 };
