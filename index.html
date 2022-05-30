@@ -1,12 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="counter.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Counter</title>
   </head>
+  <style>
+    /* body reset */
+body {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: monospace;
+      }
+      div.container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 5em;
+      }
+      /* increment add box*/
+      div.container > .add {
+        font-family: monospace;
+        background-color: red;
+        border: 1px solid red;
+        border-radius: 10px;
+        padding: 30px;
+        font-size: 30px;
+        margin: 0 auto;
+        grid-row: 1/2;
+        transition: 300ms;
+        margin-top: 10px;
+      }
+      /* current value */
+      div.container > div#current-value {
+        font-family: monospace;
+        grid-row: 2/3;
+        padding: 50px;
+        font-size: 30px;
+        margin: 0 auto;
+        user-select: none;
+      }
+      /* increment reduce box*/
+      div.container > .reduce {
+        font-family: monospace;
+        background-color: blue;
+        border: 1px solid blue;
+        border-radius: 10px;
+        padding: 30px;
+        font-size: 30px;
+        margin: 0 auto;
+        grid-row: 3/4;
+        transition: 300ms;
+      }
+      div.add:hover,
+      div.reduce:hover,
+      div.reset:hover {
+        box-shadow: 5px 5px black;
+        transform: translate(-5px, 5px);
+        transition: 300ms;
+        cursor: pointer;
+        user-select: none;
+      }
+/* I hate position: absolute; so much, jesus christ */
+/* reset button/box */
+      div.reset {
+        user-select: none;
+        background-color: orange;
+        border: 1px solid orange;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 0 auto;
+        text-align: center;
+        position: absolute;
+        top: 5em;
+        right: 25em;
+        transition: 300ms;
+      }
+    </style>
   <body>
   <div class="container">
       <div class="reset" onclick="reset()">reset</div>
