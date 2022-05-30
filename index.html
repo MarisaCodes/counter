@@ -8,12 +8,25 @@
     <title>Counter</title>
   </head>
   <body>
-    <h1><button onclick="increment()">Increment</button></h1>
-
-    <h2 id="btn">0</h2>
-    <h3>
-      <button onclick="decrement()" id="btn2">Decerement</button>
-    </h3>
-    <script src="counter.js"></script>
+  <div class="container">
+      <div class="reset" onclick="reset()">reset</div>
+      <div class="add" onclick="add()">Increment</div>
+      <div id="current-value">0</div>
+      <div class="reduce" onclick="reduce()">Decrement</div>
+    </div>
+    <script>
+      let count = 0;
+      add = () => {
+        document.getElementById("current-value").innerText = ++count;
+      };
+      reduce = () => {
+        count > 0 ? count-- : (count = 0);
+        document.getElementById("current-value").innerText = count;
+      };
+      reset = () => {
+        count = 0;
+        document.getElementById("current-value").innerText = count;
+      };
+    </script>
   </body>
 </html>
